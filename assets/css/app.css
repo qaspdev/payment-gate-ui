@@ -9,6 +9,7 @@ body{
     background-color: #150629;
     background-image: url('../img/background.png');
     background-attachment: fixed;
+    background-size: cover;
     font-family: 'SF Pro Display';
     outline: none;
     border:none;
