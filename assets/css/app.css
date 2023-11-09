@@ -14,7 +14,10 @@ body{
     border:none;
     overflow-x: hidden;
 }
-
+a {
+    text-decoration: none;
+    color: inherit;
+}
 .wrapper{
     width:100vw;
     height: auto;
