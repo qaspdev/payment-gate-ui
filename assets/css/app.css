@@ -1,0 +1,228 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #150629;
+    background-image: url('../img/background.png');
+    background-attachment: fixed;
+    font-family: 'SF Pro Display';
+    outline: none;
+    border:none;
+    overflow-x: hidden;
+}
+
+.wrapper{
+    width:100vw;
+    height: auto;
+    z-index: -1;
+}
+.flex{
+    display: flex;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-items-center{
+    align-items: center;
+}
+.flex-direction-column{
+    flex-direction: column;
+}
+.flex-direction-row{
+    flex-direction: row;
+}
+.justify-content-space-between{
+    justify-content:space-between;
+}
+.mt-3{
+    margin-top: 30px;
+}
+.mt-2{
+    margin-top: 20px;
+}
+.mt-1{
+    margin-top: 10px;
+}
+.color-red{
+    color:#ED1B24 !important;
+}
+.container {
+    position: relative;
+    margin: auto;
+    max-width:1240px;
+    min-height: 100vh;
+    height: auto;
+}
+.payment{
+    width: 40%;
+}
+.payment__alert{
+    padding: 10px;
+    gap: 6px;
+}
+.payment__screen{
+    margin-top: 23px;
+    width: 100%;
+    padding: 32px;
+    border-radius: 20px;
+    background: #FFF;
+}
+.payment__alert_icon{
+    width: 23.038px;
+    height: 23.038px;
+}
+.payment__alert_text{
+    color: #FFF;
+    font-size: 17.279px;
+    font-weight: 500;
+    line-height: 18.718px;
+    letter-spacing: -0.587px;
+}
+.payment__screen_title{
+    color: var(--black, #212121);
+    font-feature-settings: 'case' on;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 31.677px;
+    letter-spacing: -0.587px;
+}
+.payment__screen__text_light{
+    margin: 0;
+    opacity: 0.6;
+    color: var(--black, #212121);
+    font-feature-settings: 'case' on;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.587px;
+}
+.payment__screen_value{
+    margin-top: 5px;
+    color: var(--black, #212121);
+    font-feature-settings: 'case' on;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.587px;
+}
+.payment_screen_button{
+    padding: 11px 23px 11px 23px;
+    /* width: auto; */
+    max-width: 130px;
+    color: var(--light-button-primary-foreground, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28.798px; /* 143.988% */
+    letter-spacing: -0.346px;
+    border-radius: 14.399px;
+    background: var(--main-color, #00A458);
+    cursor: pointer;
+}
+.payment_screen_button:hover{
+    opacity: .8;
+    transition-duration: .2s;
+}
+.copy{
+    cursor: pointer;
+}
+.copy:hover{
+    opacity: .6;
+}
+.copy:active{
+    opacity: .35;
+}
+
+@media(max-width: 1250px) {
+    .container{
+        max-width: 960px;
+    }
+    .payment{
+        width: 50%;
+    }
+}
+@media(max-width: 960px) {
+    .container{
+        max-width: 720px;
+    }
+    .payment{
+        width: 65%;
+    }
+}
+@media(max-width: 720px) {
+    .container{
+        max-width: 560px;
+    }
+    .payment{
+        width: 75%;
+    }
+}
+@media(max-width: 560px) {
+    .container{
+        max-width: 420px;
+        align-items: start !important;
+    }
+    .payment{
+        margin-top:25px;
+        width: 85%;
+    }
+    .payment__screen{
+        margin-top: 16px;
+        padding: 18px;
+    }
+    .payment__screen_title{
+        font-feature-settings: 'case' on;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px; /* 129.412% */
+        letter-spacing: -0.408px;
+        font-size: 18px;
+    }
+    .payment__screen__text_light{
+        font-size: 12px;
+    }
+    .payment__screen_value{
+        font-feature-settings: 'case' on;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.408px;
+    }
+    .copy{
+        width:23px;
+        height: 23px;
+    }
+    .payment__alert_text{
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 13px; /* 108.333% */
+        letter-spacing: -0.408px;
+    }
+    .mt-1{
+        margin-top: 5px;
+    }
+    .mt-2{
+        margin-top: 10px;
+    }
+    .mt-3{
+        margin-top: 15px;
+    }
+    .payment_screen_button{
+        padding: 8px 5px;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 133.333% */
+        letter-spacing: -0.24px;
+    }
+}

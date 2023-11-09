@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "assets/css/app.css">
+    <title>Payment Gate</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container flex justify-content-center align-items-center">
+            <div class="payment flex flex-direction-column align-items-center">
+                <div class="payment__alert flex flex-direction-row align-items-center">
+                    <svg class = 'payment__alert_text' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M21.7118 17.4079L13.8419 3.74067C13.6453 3.40583 13.3645 3.1282 13.0275 2.93529C12.6905 2.74238 12.3089 2.6409 11.9206 2.6409C11.5323 2.6409 11.1507 2.74238 10.8137 2.93529C10.4767 3.1282 10.1959 3.40583 9.99925 3.74067L2.1294 17.4079C1.94017 17.7317 1.84045 18.1001 1.84045 18.4752C1.84045 18.8503 1.94017 19.2186 2.1294 19.5425C2.32354 19.8793 2.60381 20.1585 2.94145 20.3513C3.2791 20.5441 3.66196 20.6435 4.05074 20.6395H19.7905C20.1789 20.6432 20.5614 20.5436 20.8987 20.3508C21.236 20.1581 21.516 19.8791 21.71 19.5425C21.8995 19.2188 21.9995 18.8505 21.9998 18.4754C22.0002 18.1003 21.9007 17.7319 21.7118 17.4079ZM11.2007 9.84037C11.2007 9.64943 11.2765 9.46631 11.4115 9.3313C11.5465 9.19628 11.7297 9.12043 11.9206 9.12043C12.1115 9.12043 12.2947 9.19628 12.4297 9.3313C12.5647 9.46631 12.6405 9.64943 12.6405 9.84037V13.4401C12.6405 13.631 12.5647 13.8141 12.4297 13.9492C12.2947 14.0842 12.1115 14.16 11.9206 14.16C11.7297 14.16 11.5465 14.0842 11.4115 13.9492C11.2765 13.8141 11.2007 13.631 11.2007 13.4401V9.84037ZM11.9206 17.7597C11.707 17.7597 11.4982 17.6964 11.3206 17.5777C11.143 17.4591 11.0046 17.2904 10.9229 17.0931C10.8412 16.8958 10.8198 16.6786 10.8614 16.4691C10.9031 16.2597 11.006 16.0672 11.157 15.9162C11.308 15.7652 11.5004 15.6623 11.7099 15.6207C11.9194 15.579 12.1365 15.6004 12.3339 15.6821C12.5312 15.7638 12.6998 15.9023 12.8185 16.0798C12.9372 16.2574 13.0005 16.4662 13.0005 16.6798C13.0005 16.9662 12.8867 17.2409 12.6842 17.4434C12.4817 17.6459 12.207 17.7597 11.9206 17.7597Z" fill="white"/>
+                    </svg>
+                    <p class = 'payment__alert_text'>
+                        Automatic crediting of the payment is carried out at the exact amount specified below
+                    </p>
+                </div>
+                <div class="payment__screen flex flex-direction-column">
+                    <h1 class="payment__screen_title">Make a transfer using the specified details</h1>
+                    <div class="payment__screen__group flex flex-direction-column mt-2">
+                        <p class = "payment__screen__text_light mt-1">Recipient's bank</p>
+                        <p class = "payment__screen_value">UNIBANK COMMERCIAL BANK</p>
+                    </div>
+                    <div class="payment__screen__group flex flex-direction-row justify-content-space-between align-items-center mt-1">
+                        <div class="payment__screent__group_details">
+                            <p class = "payment__screen__text_light">Card number for transfer</p>
+                            <p id = 'card' class = "payment__screen_value">4098 6124 0845 5521</p>
+                        </div>
+                        <div class="payment__screent__group_icon">
+                            <svg class = 'copy' onclick="copyDetails('card')" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path d="M17.8509 2.63318C19.1943 2.63318 20.3372 3.49181 20.7608 4.69025L10.7829 4.69015C8.94902 4.69015 8.28403 4.88109 7.61361 5.23964C6.94318 5.59819 6.41703 6.12434 6.05849 6.79476C5.69994 7.46518 5.509 8.13017 5.509 9.964L5.50909 20.9704C4.31066 20.5469 3.45203 19.404 3.45203 18.0605V8.8041C3.45203 5.396 6.21484 2.63318 9.62295 2.63318H17.8509ZM21.9648 6.74713C23.6689 6.74713 25.0503 8.12854 25.0503 9.83259V23.2029C25.0503 24.907 23.6689 26.2884 21.9648 26.2884H10.6514C8.94739 26.2884 7.56598 24.907 7.56598 23.2029V9.83259C7.56598 8.12854 8.94739 6.74713 10.6514 6.74713H21.9648ZM21.9648 8.8041H10.6514C10.0834 8.8041 9.62295 9.26457 9.62295 9.83259V23.2029C9.62295 23.771 10.0834 24.2314 10.6514 24.2314H21.9648C22.5328 24.2314 22.9933 23.771 22.9933 23.2029V9.83259C22.9933 9.26457 22.5328 8.8041 21.9648 8.8041Z" fill="#00A458"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="payment__screen__group flex flex-direction-row justify-content-space-between align-items-center mt-1">
+                        <div class="payment__screent__group_details">
+                            <p class = "payment__screen__text_light">Amount to transfer</p>
+                            <p class = "payment__screen_value"><span id = 'amount'>170</span> AZN</p>
+                        </div>
+                        <div class="payment__screent__group_icon">
+                            <svg class = 'copy' onclick="copyDetails('amount')" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path d="M17.8509 2.63318C19.1943 2.63318 20.3372 3.49181 20.7608 4.69025L10.7829 4.69015C8.94902 4.69015 8.28403 4.88109 7.61361 5.23964C6.94318 5.59819 6.41703 6.12434 6.05849 6.79476C5.69994 7.46518 5.509 8.13017 5.509 9.964L5.50909 20.9704C4.31066 20.5469 3.45203 19.404 3.45203 18.0605V8.8041C3.45203 5.396 6.21484 2.63318 9.62295 2.63318H17.8509ZM21.9648 6.74713C23.6689 6.74713 25.0503 8.12854 25.0503 9.83259V23.2029C25.0503 24.907 23.6689 26.2884 21.9648 26.2884H10.6514C8.94739 26.2884 7.56598 24.907 7.56598 23.2029V9.83259C7.56598 8.12854 8.94739 6.74713 10.6514 6.74713H21.9648ZM21.9648 8.8041H10.6514C10.0834 8.8041 9.62295 9.26457 9.62295 9.83259V23.2029C9.62295 23.771 10.0834 24.2314 10.6514 24.2314H21.9648C22.5328 24.2314 22.9933 23.771 22.9933 23.2029V9.83259C22.9933 9.26457 22.5328 8.8041 21.9648 8.8041Z" fill="#00A458"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="payment__screen__group flex flex-direction-column mt-3">
+                        <p class = "payment__screen__text_light">We are waiting for your payment</p>
+                        <p class = "payment__screen_value color-red">18:32</p>
+                    </div>
+                    <div class="payment_screen_button flex justify-content-center align-items-center mt-3">Оплатил</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const copyDetails= async (elemID) => {
+            let text = document.getElementById(elemID).innerHTML;
+            await navigator.clipboard.writeText(text);
+        }
+      </script>
+      
+</body>
+</html>
