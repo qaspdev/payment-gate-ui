@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -10,7 +10,7 @@ body{
     background-image: url('../img/background.png');
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'SF Pro Display';
+    font-family: 'Manrope', sans-serif;
     outline: none;
     border:none;
     overflow-x: hidden;
@@ -116,9 +116,9 @@ a {
     letter-spacing: -0.587px;
 }
 .payment_screen_button{
-    padding: 11px 23px 11px 23px;
-    /* width: auto; */
-    max-width: 130px;
+    padding:11px;
+    width: auto;
+    /* max-width: 130px; */
     color: var(--light-button-primary-foreground, #FFF);
     font-feature-settings: 'clig' off, 'liga' off;
     font-size: 20px;
@@ -188,14 +188,14 @@ a {
         font-weight: 500;
         line-height: 22px; /* 129.412% */
         letter-spacing: -0.408px;
-        font-size: 18px;
+        font-size: 24px;
     }
     .payment__screen__text_light{
-        font-size: 12px;
+        font-size: 15px;
     }
     .payment__screen_value{
         font-feature-settings: 'case' on;
-        font-size: 16px;
+        font-size: 17px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
@@ -221,8 +221,11 @@ a {
     .mt-3{
         margin-top: 15px;
     }
+    .red{
+        font-size:16px;
+    }
     .payment_screen_button{
-        padding: 8px 5px;
+        padding: 11px;
         font-size: 15px;
         font-style: normal;
         font-weight: 500;
